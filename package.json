@@ -2,7 +2,7 @@
       "scripts": {
         "test:chrome": "cypress run --browser chrome --no-exit"
     },
-    "cypress": "^13.15.0",
+    "cypress": "13.15.0",
     "cypress-cucumber-preprocessor": {
         "step_definitions": "cypress/support/steps"
     }
