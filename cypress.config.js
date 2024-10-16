@@ -6,7 +6,7 @@ module.exports = defineConfig({
       // eventos ou plugins Cypress podem ser configurados aqui
       return config
     },
-    specPattern: "cypress/e2e/**/*.cy.{js,jsx,ts,tsx}", // Mantém o padrão de arquivos de teste
+    specPattern: "cypress/e2e/**/*.cy.{js,jsx,ts,tsx}", 
     viewportWidth: 1024,
     viewportHeight: 768,
     defaultCommandTimeout: 10000,
