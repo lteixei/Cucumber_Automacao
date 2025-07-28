@@ -1,4 +1,3 @@
-![image](https://github.com/user-attachments/assets/2e40ab30-f848-41a7-943e-362b65ea0f4d)
 # Projeto Base Automação Web - Selenium, Java & Cucumber
 
 ## Ferramentas utilizadas:
