@@ -1,0 +1,8 @@
+pages\CommonPage.class
+pages\EcommerceMainPage.class
+steps\CommonSteps.class
+util\Utils.class
+util\TestRule.class
+pages\EcommerceMainPageElementMap.class
+steps\EcommerceMainSteps.class
+tests\RunTest.class
