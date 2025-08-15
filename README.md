@@ -1,108 +1,145 @@
-# Projeto Base Automação Web - Selenium, Java & Cucumber
+# 🧪 Automação de Testes com Cucumber
 
-## Ferramentas utilizadas:
-- [Maven](https://maven.apache.org/ "Maven")
-- [Java](https://www.java.com/pt_BR/ "Java")
-- [JUnit](https://junit.org/junit4/ "JUnit")
-- [Selenium](https://www.seleniumhq.org/ "Selenium")
-- [ChromeDriver](https://chromedriver.chromium.org/downloads "ChromeDriver")
-- [Cucumber](https://cucumber.io/ "Cucumber")
-- [PageFactory](https://github.com/SeleniumHQ/selenium/wiki/PageFactory "PageFactory")
-- [PageObject (pattern)](https://martinfowler.com/bliki/PageObject.html "PageObject")
+Este repositório apresenta uma base completa para automação de testes utilizando **Cucumber**, uma ferramenta de **Behavior Driven Development (BDD)** que permite escrever testes legíveis por humanos utilizando a linguagem **Gherkin**.  
 
-## Arquitetura:
+O objetivo é fornecer uma referência prática e organizada para criar testes automatizados seguindo boas práticas de BDD.
 
-```
-├── README.md
-├── pom.xml
-└── src
-    ├── main
-    │   ├── java
-    │   └── resources
-    └── test
-        ├── java
-        │   ├── pages
-        │   │   ├── CommonPage.java
-        │   │   ├── EcommerceMainPage.java
-        │   │   └── EcommerceMainPageElementMap.java
-        │   ├── steps
-        │   │   ├── CommonSteps.java
-        │   │   └── EcommerceMainSteps.java
-        │   ├── tests
-        │   │   └── RunTest.java
-        │   └── util
-        │       ├── TestRule.java
-        │       └── Utils.java
-        └── resources
-            ├── drivers
-            │   └── READ.txt
-            └── features
-                └── Pesquisa.feature
-```
+---
 
+## 🚀 Por que utilizar Cucumber?
 
-### Arquitetura - Bibliotecas utilizadas
+- ✅ Permite **testes colaborativos** entre desenvolvedores, testers e stakeholders  
+- ✅ Escreve testes em **linguagem natural (Gherkin)**  
+- ✅ Suporte a integração com **Selenium, Playwright ou outros frameworks de teste**  
+- ✅ Facilita **manutenção e escalabilidade** dos testes  
 
-Neste projeto foram utilizadas 4 bibliotecas:
-- [selenium-java](https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java "selenium-java")
-- [junit](https://mvnrepository.com/artifact/junit/junit "junit")
-- [cucumber-java](https://mvnrepository.com/artifact/info.cukes/cucumber-java "cucumber-java")
-- [cucumber-junit](https://mvnrepository.com/artifact/info.cukes/cucumber-junit "cucumber-junit")
+---
 
-A biblioteca selenium-java possui as implementações de: *WebDriver, DesiredCaps, ChromeDriver, ExpectedConditions, WebDriverWait, Actions, WebElement, FindBy, PageFactory*, utilizadas no projeto.
+## 🧰 Tecnologias Utilizadas
 
-A biblioteca junit possui as implementações de: *TestWatcher, Description, ClassRule, RunWith, Assert*, utilizadas no projeto.
+| Ferramenta           | Descrição                                  |
+|---------------------|--------------------------------------------|
+| Cucumber             | Framework BDD para testes                  |
+| Gherkin              | Linguagem de escrita dos cenários          |
+| Selenium / Playwright| Automação de browser                       |
+| Java / Python / JS   | Linguagem de implementação                 |
+| Maven / Gradle / npm | Gerenciador de dependências e execução     |
+| JUnit / TestNG       | Framework de execução de testes (Java)     |
 
-A biblioteca cucumber-java possui as implementações de: *Scenario, Before, After, Dado, E, Entao, CucumberOptions*, utilizadas no projeto.
+---
 
-A biblioteca cucumber-junit possui a implementação da classe *Cucumber.class*, utilizada da classe RunTest como ferramenta de execução.
+## ⚙️ Pré-requisitos
 
-### Arquitetura - Mapeamento dos elementos
-Para mapear os elementos utilizamos a biblioteca do selenium PageFactory, responsável por abstrair os elementos para uma classe única e para facilitar a escrita e manutenção. Por padrão os elementos são armazenados nas classes com o padrão <NomeClasse>PageElementMap. Detalhes da implementação e exemplos:
-- WebElement - responsável por identificar os elementos como Web;
-- FindBy - responsável por mapear, através de anotações, os seletores dos WebElements
-- CommonPage - responsável por abstrair ações comuns a todas as classes de Page e PageElementMap
+- ✅ Java 11+ (para projetos Java) ou Node.js (para projetos JS)  
+- ✅ Maven ou Gradle (Java) / npm (JS)  
+- ✅ Git instalado  
+- ✅ Navegador Chrome, Edge ou Firefox  
 
-Após mapeados, é necessário "inicializar" os elementos na classe em que serão utilizadas. Por padrão, os elementos são utilizados nas classe <NomeDaClasse>Page correspondentes. Para inicializar os elementos, siga o exemplo abaixo:
+---
 
-`PageFactory.initElements(driver, classe)`
+## 📦 Instalação (Java + Maven)
 
-### Arquitetura - Interação com elementos da página
-Para interagir com elementos da página, conforme o padrão Page Objects, criamos uma classe de Page para cada página ou grupo de páginas do sistema. Abaixo detalhes da implementação e exemplos:
-- PageFactory: responsável pela inicialização dos elementos na página
-- TestRule: responsável por gerenciar a execução do teste como um todo. Neste caso, captura qual o driver que está sendo utilizado.
-- Utils: responsável por armazenar funções úteis para criação e execução dos testes.
+```bash
+# Clonar repositório
+git clone https://github.com/seu-usuario/seu-projeto.git
+cd seu-projeto
 
-### Arquitetura - Classe Base (CommonPage)
-Nesta classe são definidas ações comuns a todas a outras Pages que serão criadas no projeto, como:
-- captura de screenshots
-- logs
-- waits (estáticos e explícitos)
+# Instalar dependências
+mvn clean install
 
-### Arquitetura - Cucumber e Definições de steps
-Para criação dos testes, o passo a passo é definido em arquivos .feature, dentro do diretório resources/features. Estes arquivos contém o detalhamento do teste que será executado. Para isso utilizamos o Cucumber.
-Para cada passo utilizado neste arquivo, deve ser criada uma definição de Steps
-correspondente. Os arquivos de steps serão criados no diretório steps.
-
-### Arquitetura - Execução dos testes
-Para execução dos testes, utilizamos classe JUnit, em conjunto com anotações do CucumberOptions para facilitar a criação de suítes de testes com diferentes configurações.
-
-Para executar o teste, basta clicar com o botão direito sobre a classe, e selecionar "Run <NomeDaClasseDeExecucao>". É possível executar com maven também, através do comando: `mvn test -Dtest=NomeDaClasseDeExecucao`
-
-### Arquitetura - Utilitários e TestRule
-Para configuração do ciclo de vida do teste, geração de relatórios e criação de métodos auxiliares, utilizamos as classes TestRule e Utils, respectivamente. Alguns dos métodos mais importantes são:
-**TestRule**
-- ***starting, beforeCenario e afterCenario*** - métodos que definem os comportamentos antes, durante e após a execução dos testes em geral e de cada cenário.
-- ***abrirNavegador*** - método responsável por um abrir um navegador Chrome.
-
-**Utils**
-- ***setDriverByOS*** - método para definir o driver de acordo com o sistema operacional.
-
-### Arquitetura - ChromeDriver
-
-Por conveniência, faça o download do chromedriver adequado para o seu sistema operacional e adicione no diretório resources/drivers.
-Local para download: https://chromedriver.chromium.org/downloads
+# Executar testes
+mvn test
 
 
-------------
+## 🏗 Estrutura de Projeto Recomendada
+📦 cucumber-automation/
+├── 📁 src/
+│   ├── 📁 main/
+│   │   └── 📁 java/
+│   │       └── pages/           # Page Objects
+│   └── 📁 test/
+│       ├── 📁 java/
+│       │   ├── stepDefinitions/  # Implementação dos steps
+│       │   └── runners/          # Classes para execução
+│       └── 📁 resources/
+│           └── features/         # Arquivos .feature em Gherkin
+├── pom.xml                       # Dependências Maven
+└── README.md
 
+## 📄 Estrutura de um Cenário em Gherkin
+Feature: Login de usuário
+
+  Scenario: Usuário realiza login com sucesso
+    Given que o usuário acessa a página de login
+    When ele preenche o usuário e a senha válidos
+    And clica no botão de login
+    Then ele deve ver a mensagem de boas-vindas
+
+## 🔎 Exemplo de Step Definition (Java + Selenium)
+package stepDefinitions;
+
+import io.cucumber.java.en.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import static org.junit.Assert.assertTrue;
+
+public class LoginSteps {
+    WebDriver driver;
+
+    @Given("que o usuário acessa a página de login")
+    public void acessarPaginaLogin() {
+        driver = new ChromeDriver();
+        driver.get("https://exemplo.com/login");
+    }
+
+    @When("ele preenche o usuário e a senha válidos")
+    public void preencherCredenciais() {
+        driver.findElement(By.id("username")).sendKeys("usuario_teste");
+        driver.findElement(By.id("password")).sendKeys("senha123");
+    }
+
+    @And("clica no botão de login")
+    public void clicarLogin() {
+        driver.findElement(By.id("login-button")).click();
+    }
+
+    @Then("ele deve ver a mensagem de boas-vindas")
+    public void verificarMensagem() {
+        assertTrue(driver.findElement(By.tagName("body")).getText().contains("Bem-vindo"));
+        driver.quit();
+    }
+}
+
+## ▶️ Executando os Testes
+# Java + Maven
+mvn test
+
+# JS + Node (Cucumber + Playwright)
+npx cucumber-js
+
+## ✅ Boas Práticas
+Dica	Explicação
+Separar features por módulo	Organização e manutenção facilitada
+Reutilizar steps	Evita duplicação e aumenta consistência
+Page Object Model	Facilita manutenção dos seletores de elementos
+Evitar lógica complexa no Gherkin	Cenários devem ser claros e legíveis
+Usar tags	Executar testes específicos (@login) ou grupos de testes
+Integrar com CI/CD	Automação completa e relatórios automáticos
+## 🔮 Funcionalidades Avançadas
+
+✅ Hooks: @Before e @After para setup e teardown
+
+✅ Paralelização de testes com Maven ou Cucumber CLI
+
+✅ Gerar relatórios em HTML ou JSON para análise detalhada
+
+✅ Integração com Selenium, Playwright ou Appium
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas!
+Abra uma Issue ou envie um Pull Request com melhorias, novos cenários ou exemplos de integração.
+
+## 📄 Licença
+Este projeto está licenciado sob a MIT License.
