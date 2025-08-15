@@ -42,7 +42,7 @@ O objetivo é fornecer uma referência prática e organizada para criar testes a
 ```bash
 # Clonar repositório
 git clone https://github.com/seu-usuario/seu-projeto.git
-cd seu-projeto
+* Criar dentro da pasta do seu-projeto
 
 # Instalar dependências
 mvn clean install
@@ -156,4 +156,5 @@ Abra uma Issue ou envie um Pull Request com melhorias, novos cenários ou exempl
 ## 📄 Licença
 
 Este projeto está licenciado sob a MIT License.
+
 
