@@ -49,7 +49,7 @@ mvn clean install
 
 # Executar testes
 mvn test
-
+```
 
 ## 🏗 Estrutura de Projeto Recomendada
 📦 cucumber-automation/
@@ -66,14 +66,18 @@ mvn test
 ├── pom.xml                       # Dependências Maven
 └── README.md
 
+---
+
 ## 📄 Estrutura de um Cenário em Gherkin
-Feature: Login de usuário
+###Feature: Login de usuário
 
   Scenario: Usuário realiza login com sucesso
     Given que o usuário acessa a página de login
     When ele preenche o usuário e a senha válidos
     And clica no botão de login
     Then ele deve ver a mensagem de boas-vindas
+
+---
 
 ## 🔎 Exemplo de Step Definition (Java + Selenium)
 package stepDefinitions;
@@ -111,35 +115,44 @@ public class LoginSteps {
     }
 }
 
+---
+
 ## ▶️ Executando os Testes
-# Java + Maven
+### Java + Maven
 mvn test
 
-# JS + Node (Cucumber + Playwright)
+### JS + Node (Cucumber + Playwright)
 npx cucumber-js
+
+---
 
 ## ✅ Boas Práticas
 Dica	Explicação
-Separar features por módulo	Organização e manutenção facilitada
-Reutilizar steps	Evita duplicação e aumenta consistência
-Page Object Model	Facilita manutenção dos seletores de elementos
-Evitar lógica complexa no Gherkin	Cenários devem ser claros e legíveis
-Usar tags	Executar testes específicos (@login) ou grupos de testes
-Integrar com CI/CD	Automação completa e relatórios automáticos
-## 🔮 Funcionalidades Avançadas
+Separar features por módulo - Organização e manutenção facilitada  
+Reutilizar steps - Evita duplicação e aumenta consistência  
+Page Object Model - Facilita manutenção dos seletores de elementos  
+Evitar lógica complexa no Gherkin - Cenários devem ser claros e legíveis  
+Usar tags - Executar testes específicos (@login) ou grupos de testes  
+Integrar com CI/CD - Automação completa e relatórios automáticos  
 
-✅ Hooks: @Before e @After para setup e teardown
+---
 
-✅ Paralelização de testes com Maven ou Cucumber CLI
+## 🔮 Funcionalidades Avançadas  
 
-✅ Gerar relatórios em HTML ou JSON para análise detalhada
+✅ Hooks: @Before e @After para setup e teardown  
+✅ Paralelização de testes com Maven ou Cucumber CLI  
+✅ Gerar relatórios em HTML ou JSON para análise detalhada  
+✅ Integração com Selenium, Playwright ou Appium  
 
-✅ Integração com Selenium, Playwright ou Appium
+---
 
 ## 🤝 Contribuição
 
 Contribuições são bem-vindas!
 Abra uma Issue ou envie um Pull Request com melhorias, novos cenários ou exemplos de integração.
 
+---
+
 ## 📄 Licença
+
 Este projeto está licenciado sob a MIT License.
