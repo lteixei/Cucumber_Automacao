@@ -146,16 +146,19 @@ Integrar com CI/CD - Automação completa e relatórios automáticos.
 
 ---
 
-## 🤝 Contribuição
+## 🤝 Boas práticas para contribuições:  
 
-Contribuições são bem-vindas!
-Abra uma Issue ou envie um Pull Request com melhorias, novos cenários ou exemplos de integração.
+📌 Escreva código limpo, legível e documentado.  
+📌 Teste suas mudanças antes de enviar o Pull Request.  
+📌 Mantenha a consistência com o estilo e padrões do projeto.  
+📌 Discuta melhorias ou dúvidas antes de implementar grandes mudanças.  
 
 ---
 
 ## 📄 Licença
 
 Este projeto está licenciado sob a MIT License.
+
 
 
 
