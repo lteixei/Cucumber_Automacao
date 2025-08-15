@@ -42,7 +42,7 @@ O objetivo é fornecer uma referência prática e organizada para criar testes a
 ```bash
 # Clonar repositório
 git clone https://github.com/seu-usuario/seu-projeto.git
-* Criar dentro da pasta do seu-projeto
+* Criar dentro da pasta - seu-projeto
 
 # Instalar dependências
 mvn clean install
@@ -52,19 +52,19 @@ mvn test
 ```
 
 ## 🏗 Estrutura de Projeto Recomendada
-📦 cucumber-automation/
-├── 📁 src/
-│   ├── 📁 main/
-│   │   └── 📁 java/
-│   │       └── pages/           # Page Objects
-│   └── 📁 test/
-│       ├── 📁 java/
-│       │   ├── stepDefinitions/  # Implementação dos steps
-│       │   └── runners/          # Classes para execução
-│       └── 📁 resources/
-│           └── features/         # Arquivos .feature em Gherkin
-├── pom.xml                       # Dependências Maven
-└── README.md
+📦 cucumber-automation/  
+├── 📁 src/  
+│   ├── 📁 main/  
+│   │   └── 📁 java/  
+│   │       └── pages/           # Page Objects  
+│   └── 📁 test/  
+│       ├── 📁 java/  
+│       │   ├── stepDefinitions/  # Implementação dos steps  
+│       │   └── runners/          # Classes para execução  
+│       └── 📁 resources/  
+│           └── features/         # Arquivos .feature em Gherkin  
+├── pom.xml                       # Dependências Maven  
+└── README.md  
 
 ---
 
@@ -156,5 +156,6 @@ Abra uma Issue ou envie um Pull Request com melhorias, novos cenários ou exempl
 ## 📄 Licença
 
 Este projeto está licenciado sob a MIT License.
+
 
 
