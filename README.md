@@ -71,63 +71,63 @@ mvn test
 ## 📄 Estrutura de um Cenário em Gherkin
 Feature: Login de usuário
 
-  Scenario: Usuário realiza login com sucesso
-    Given que o usuário acessa a página de login
-    When ele preenche o usuário e a senha válidos
-    And clica no botão de login
-    Then ele deve ver a mensagem de boas-vindas
+  Scenario: Usuário realiza login com sucesso  
+    Given que o usuário acessa a página de login  
+    When ele preenche o usuário e a senha válidos  
+    And clica no botão de login  
+    Then ele deve ver a mensagem de boas-vindas  
 
 ---
 
 ## 🔎 Exemplo de Step Definition (Java + Selenium)
 package stepDefinitions;
 
-import io.cucumber.java.en.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import static org.junit.Assert.assertTrue;
+import io.cucumber.java.en.*;  
+import org.openqa.selenium.By;  
+import org.openqa.selenium.WebDriver;  
+import org.openqa.selenium.chrome.ChromeDriver;  
+import static org.junit.Assert.assertTrue;  
 
-public class LoginSteps {
-    WebDriver driver;
+public class LoginSteps {  
+    WebDriver driver;  
 
-    @Given("que o usuário acessa a página de login")
-    public void acessarPaginaLogin() {
-        driver = new ChromeDriver();
-        driver.get("https://exemplo.com/login");
-    }
+    @Given("que o usuário acessa a página de login")  
+    public void acessarPaginaLogin() {  
+        driver = new ChromeDriver();  
+        driver.get("https://exemplo.com/login");  
+    }  
 
-    @When("ele preenche o usuário e a senha válidos")
-    public void preencherCredenciais() {
-        driver.findElement(By.id("username")).sendKeys("usuario_teste");
-        driver.findElement(By.id("password")).sendKeys("senha123");
-    }
+    @When("ele preenche o usuário e a senha válidos")  
+    public void preencherCredenciais() {  
+        driver.findElement(By.id("username")).sendKeys("usuario_teste");  
+        driver.findElement(By.id("password")).sendKeys("senha123");  
+    }  
 
-    @And("clica no botão de login")
-    public void clicarLogin() {
-        driver.findElement(By.id("login-button")).click();
-    }
+    @And("clica no botão de login")  
+    public void clicarLogin() {  
+        driver.findElement(By.id("login-button")).click();  
+    }  
 
-    @Then("ele deve ver a mensagem de boas-vindas")
-    public void verificarMensagem() {
-        assertTrue(driver.findElement(By.tagName("body")).getText().contains("Bem-vindo"));
-        driver.quit();
-    }
-}
-
----
-
-## ▶️ Executando os Testes
-### Java + Maven
-mvn test
-
-### JS + Node (Cucumber + Playwright)
-npx cucumber-js
+    @Then("ele deve ver a mensagem de boas-vindas")  
+    public void verificarMensagem() {  
+        assertTrue(driver.findElement(By.tagName("body")).getText().contains("Bem-vindo"));  
+        driver.quit();  
+    }  
+}  
 
 ---
 
-## ✅ Boas Práticas
-Dica	Explicação
+## ▶️ Executando os Testes  
+### Java + Maven  
+mvn test  
+
+### JS + Node (Cucumber + Playwright)  
+npx cucumber-js  
+
+---
+
+## ✅ Boas Práticas  
+Dica	Explicação  
 Separar features por módulo - Organização e manutenção facilitada;  
 Reutilizar steps - Evita duplicação e aumenta consistência;  
 Page Object Model - Facilita manutenção dos seletores de elementos;  
@@ -156,6 +156,7 @@ Abra uma Issue ou envie um Pull Request com melhorias, novos cenários ou exempl
 ## 📄 Licença
 
 Este projeto está licenciado sob a MIT License.
+
 
 
 
