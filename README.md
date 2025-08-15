@@ -69,7 +69,7 @@ mvn test
 ---
 
 ## 📄 Estrutura de um Cenário em Gherkin
-###Feature: Login de usuário
+Feature: Login de usuário
 
   Scenario: Usuário realiza login com sucesso
     Given que o usuário acessa a página de login
@@ -128,21 +128,21 @@ npx cucumber-js
 
 ## ✅ Boas Práticas
 Dica	Explicação
-Separar features por módulo - Organização e manutenção facilitada  
-Reutilizar steps - Evita duplicação e aumenta consistência  
-Page Object Model - Facilita manutenção dos seletores de elementos  
-Evitar lógica complexa no Gherkin - Cenários devem ser claros e legíveis  
-Usar tags - Executar testes específicos (@login) ou grupos de testes  
-Integrar com CI/CD - Automação completa e relatórios automáticos  
+Separar features por módulo - Organização e manutenção facilitada;  
+Reutilizar steps - Evita duplicação e aumenta consistência;  
+Page Object Model - Facilita manutenção dos seletores de elementos;  
+Evitar lógica complexa no Gherkin - Cenários devem ser claros e legíveis;  
+Usar tags - Executar testes específicos (@login) ou grupos de testes;  
+Integrar com CI/CD - Automação completa e relatórios automáticos.  
 
 ---
 
 ## 🔮 Funcionalidades Avançadas  
 
-✅ Hooks: @Before e @After para setup e teardown  
-✅ Paralelização de testes com Maven ou Cucumber CLI  
-✅ Gerar relatórios em HTML ou JSON para análise detalhada  
-✅ Integração com Selenium, Playwright ou Appium  
+✅ Hooks: @Before e @After para setup e teardown;  
+✅ Paralelização de testes com Maven ou Cucumber CLI;  
+✅ Gerar relatórios em HTML ou JSON para análise detalhada;  
+✅ Integração com Selenium, Playwright ou Appium.  
 
 ---
 
@@ -156,3 +156,4 @@ Abra uma Issue ou envie um Pull Request com melhorias, novos cenários ou exempl
 ## 📄 Licença
 
 Este projeto está licenciado sob a MIT License.
+
