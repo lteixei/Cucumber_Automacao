@@ -8,10 +8,10 @@ O objetivo é fornecer uma referência prática e organizada para criar testes a
 
 ## 🚀 Por que utilizar Cucumber?
 
-- ✅ Permite **testes colaborativos** entre desenvolvedores, testers e stakeholders  
-- ✅ Escreve testes em **linguagem natural (Gherkin)**  
-- ✅ Suporte a integração com **Selenium, Playwright ou outros frameworks de teste**  
-- ✅ Facilita **manutenção e escalabilidade** dos testes  
+✅ Permite **testes colaborativos** entre desenvolvedores, testers e stakeholders  
+✅ Escreve testes em **linguagem natural (Gherkin)**  
+✅ Suporte a integração com **Selenium, Playwright ou outros frameworks de teste**  
+✅ Facilita **manutenção e escalabilidade** dos testes  
 
 ---
 
@@ -30,10 +30,10 @@ O objetivo é fornecer uma referência prática e organizada para criar testes a
 
 ## ⚙️ Pré-requisitos
 
-- ✅ Java 11+ (para projetos Java) ou Node.js (para projetos JS)  
-- ✅ Maven ou Gradle (Java) / npm (JS)  
-- ✅ Git instalado  
-- ✅ Navegador Chrome, Edge ou Firefox  
+✅ Java 11+ (para projetos Java) ou Node.js (para projetos JS)  
+✅ Maven ou Gradle (Java) / npm (JS)  
+✅ Git instalado  
+✅ Navegador Chrome, Edge ou Firefox  
 
 ---
 
@@ -52,6 +52,7 @@ mvn test
 ```
 
 ## 🏗 Estrutura de Projeto Recomendada
+
 📦 cucumber-automation/  
 ├── 📁 src/  
 │   ├── 📁 main/  
@@ -128,7 +129,7 @@ public class LoginSteps {
 - mvn test  
 
 ### JS + Node (Cucumber + Playwright)  
-npx cucumber-js  
+- npx cucumber-js  
 
 ---
 
@@ -156,8 +157,8 @@ npx cucumber-js
 
 ## 🤝 Contribuição  
   
-Contribuições são bem-vindas!  
-Abra uma Issue ou envie um Pull Request com melhorias, novos cenários ou exemplos de integração.
+- Contribuições são bem-vindas!  
+- Abra uma Issue ou envie um Pull Request com melhorias, novos cenários ou exemplos de integração.
 
 ---
 
@@ -183,3 +184,4 @@ Abra uma Issue ou envie um Pull Request com melhorias, novos cenários ou exempl
 ## 📝 Licença
 
 - Este projeto está licenciado sob a MIT License.
+
