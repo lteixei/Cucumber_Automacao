@@ -38,18 +38,17 @@ O objetivo é fornecer uma referência prática e organizada para criar testes a
 ---
 
 ## 📦 Instalação (Java + Maven)
-
-```bash
-# Clonar repositório
-git clone https://github.com/seu-usuario/seu-projeto.git
+### Clonar repositório
+- git clone https://github.com/seu-usuario/seu-projeto.git
 * Criar dentro da pasta - seu-projeto
 
-# Instalar dependências
-mvn clean install
+### Instalar dependências
+- mvn clean install
 
-# Executar testes
-mvn test
-```
+### Executar testes
+- mvn test
+
+---
 
 ## 🏗 Estrutura de Projeto Recomendada
 
@@ -184,4 +183,5 @@ public class LoginSteps {
 ## 📝 Licença
 
 - Este projeto está licenciado sob a MIT License.
+
 
