@@ -69,6 +69,8 @@ mvn test
 ---
 
 ## 📄 Estrutura de um Cenário em Gherkin
+
+```bash
 Feature: Login de usuário
 
   Scenario: Usuário realiza login com sucesso  
@@ -76,10 +78,13 @@ Feature: Login de usuário
     When ele preenche o usuário e a senha válidos  
     And clica no botão de login  
     Then ele deve ver a mensagem de boas-vindas  
+```
 
 ---
 
 ## 🔎 Exemplo de Step Definition (Java + Selenium)
+
+```bash
 package stepDefinitions;
 
 import io.cucumber.java.en.*;  
@@ -114,26 +119,29 @@ public class LoginSteps {
         driver.quit();  
     }  
 }  
+```
 
 ---
 
 ## ▶️ Executando os Testes  
 ### Java + Maven  
-mvn test  
+- mvn test  
 
 ### JS + Node (Cucumber + Playwright)  
 npx cucumber-js  
 
 ---
 
-## ✅ Boas Práticas  
-Dica	Explicação  
-Separar features por módulo - Organização e manutenção facilitada;  
-Reutilizar steps - Evita duplicação e aumenta consistência;  
-Page Object Model - Facilita manutenção dos seletores de elementos;  
-Evitar lógica complexa no Gherkin - Cenários devem ser claros e legíveis;  
-Usar tags - Executar testes específicos (@login) ou grupos de testes;  
-Integrar com CI/CD - Automação completa e relatórios automáticos.  
+## ✅ Boas Práticas 
+
+| Dica                               | Explicação                                                |
+|------------------------------------|-----------------------------------------------------------|
+| Separar features por módulo        | Organização e manutenção facilitada                       |
+| Reutilizar steps                   | Evita duplicação e aumenta consistência                   |
+| Page Object Model                  | Facilita manutenção dos seletores de elementos            |
+| Evitar lógica complexa no Gherkin  | Cenários devem ser claros e legíveis                      |
+| Usar tags                          | Executar testes específicos (@login) ou grupos de testes  |
+| Integrar com CI/CD                 | Automação completa e relatórios automáticos               |
 
 ---
 
@@ -146,21 +154,32 @@ Integrar com CI/CD - Automação completa e relatórios automáticos.
 
 ---
 
-## 🤝 Boas práticas para contribuições:  
+## 🤝 Contribuição  
+  
+Contribuições são bem-vindas!  
+Abra uma Issue ou envie um Pull Request com melhorias, novos cenários ou exemplos de integração.
+
+---
+
+## 🤝 Boas práticas para contribuições:
 
 📌 Escreva código limpo, legível e documentado.  
 📌 Teste suas mudanças antes de enviar o Pull Request.  
 📌 Mantenha a consistência com o estilo e padrões do projeto.  
-📌 Discuta melhorias ou dúvidas antes de implementar grandes mudanças.  
+📌 Discuta melhorias ou dúvidas antes de implementar grandes mudanças.
 
 ---
 
-## 📄 Licença
+## 👩‍💻 Contato
 
-Este projeto está licenciado sob a MIT License.
+- Informações	
+- Nome	Leonardo da Motta Teixeira  
+- Cargo	QA Engineer / Gestor / Tester-Sênior  
+- LinkedIn	www.linkedin.com/in/leonardo-da-motta-teixeira-3584734b  
+- E-mail	lteixei@hotmail.com  
 
+---
 
+## 📝 Licença
 
-
-
-
+- Este projeto está licenciado sob a MIT License.
