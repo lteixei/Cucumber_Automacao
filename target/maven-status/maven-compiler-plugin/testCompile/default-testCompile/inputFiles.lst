@@ -1,8 +1,3 @@
-D:\Estrutura de Automações\Cucumber\Cucumber_Automacao\src\test\java\tests\RunTest.java
-D:\Estrutura de Automações\Cucumber\Cucumber_Automacao\src\test\java\steps\CommonSteps.java
-D:\Estrutura de Automações\Cucumber\Cucumber_Automacao\src\test\java\util\TestRule.java
-D:\Estrutura de Automações\Cucumber\Cucumber_Automacao\src\test\java\pages\CommonPage.java
-D:\Estrutura de Automações\Cucumber\Cucumber_Automacao\src\test\java\pages\EcommerceMainPageElementMap.java
-D:\Estrutura de Automações\Cucumber\Cucumber_Automacao\src\test\java\util\Utils.java
-D:\Estrutura de Automações\Cucumber\Cucumber_Automacao\src\test\java\pages\EcommerceMainPage.java
-D:\Estrutura de Automações\Cucumber\Cucumber_Automacao\src\test\java\steps\EcommerceMainSteps.java
+D:\Estrutura_de_Automacoes\Cucumber\Cucumber_Automacao\src\test\java\runners\TestRunner.java
+D:\Estrutura_de_Automacoes\Cucumber\Cucumber_Automacao\src\test\java\stepdefinitions\LoginSteps.java
+D:\Estrutura_de_Automacoes\Cucumber\Cucumber_Automacao\src\test\java\utils\TestRule.java
